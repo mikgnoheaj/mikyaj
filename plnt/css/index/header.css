@@ -1,0 +1,659 @@
+:root {
+  /* ----font-size---- */
+  --fontsize--xs: 15px;
+  --fontsize--s: 25px;
+  --fontsize--m: 30px;
+  --fontsize--l: 35px;
+  --fontsize--xl: 40px;
+
+  --fontsize-vw-xs: 1vw;
+  --fontsize-vw-s: 1.5vw;
+  --fontsize-vw-m: 2vw;
+  --fontsize-vw-l: 3vw;
+  --fontsize-vw-xl: 5vw;
+}
+/* --------------------------------모바일-------------------------------- */
+
+@media screen and (max-width: 700px) {
+  header {
+    width: 100vw;
+    height: 9vh;
+    box-sizing: border-box;
+  }
+
+  nav {
+    width: 100vw;
+    padding: 1em;
+    position: fixed;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    z-index: 9999;
+    box-sizing: border-box;
+    position: relative;
+    position: fixed;
+  }
+
+  .menu_btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #logo {
+    width: 25vw;
+  }
+
+  .menu {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    font-size: 20px;
+  }
+
+  .basket {
+    display: none;
+  }
+  .menu_list {
+    left: 0;
+    top: 8.5vh;
+    width: 100vw;
+    height: 0vh;
+    background: white;
+    position: absolute;
+    display: none;
+    transition: 1s all linear;
+    animation: act 2s ease-in-out;
+    z-index: 10;
+    transition: 1s all linear;
+  }
+
+  .menu_list.act {
+    display: none;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    animation: act 1s linear;
+  }
+
+  @keyframes act {
+    0% {
+      opacity: 0;
+      transform: translateY(-1vh);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(0vh);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0vh);
+    }
+  }
+
+  .menu_list > ul {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .menu_list > ul li {
+    transition: 1s all ease-in-out;
+  }
+  .menu_list > ul li.appear {
+    opacity: 1;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: scale();
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .utils {
+    display: flex;
+    gap: 1em;
+  }
+
+  .utils i {
+    transform: scale(0.8);
+  }
+
+  .on {
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100vw;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    box-sizing: border-box;
+  }
+
+  .login {
+    cursor: pointer;
+  }
+
+  .on > ul:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .on > ul:last-child {
+    display: flex;
+  }
+
+  .on > ul > li {
+    padding: 2em;
+  }
+
+  .login-wraper {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.295);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .login-inner {
+    width: 80%;
+    height: 700px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    overflow: hidden;
+  }
+
+  .login_top {
+    width: 100%;
+    height: 30%;
+    background: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loginTitle {
+    font-size: 100px;
+  }
+
+  .login_bottom {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .user,
+  .passwords {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  form input {
+    width: 400px;
+    height: 50px;
+  }
+
+  input[type^="t"],
+  input[type^="p"] {
+    width: 400px;
+    padding: 1.5em;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline-style: none;
+  }
+
+  /* --------------로그인창------------- */
+  .loginWraper {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.253);
+    backdrop-filter: blur(50px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+  }
+  .loginInner {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .loginTop {
+    width: 100%;
+    height: 25%;
+    color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loginTitle {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .loginBottom {
+    width: 100%;
+    height: 75%;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .userTitle {
+    width: 80vw;
+    height: 10%;
+  }
+  form {
+    width: 85vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .loginIcon {
+    display: none;
+  }
+
+  input[type^="t"],
+  input[type^="p"] {
+    height: 60px;
+    width: 100%;
+    border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .loginKeep {
+    width: 80vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .loginKeep input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .loginBtn {
+    width: 85vw;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+  }
+  .loginOption {
+    width: 80vw;
+    height: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+  .signUpWith {
+    width: 65vw;
+    height: 40vw;
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .signUpWith p {
+    font-size: 10px;
+    text-decoration: underline;
+  }
+  .signUpIcon {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+  .closeBtn {
+    display: none;
+  }
+  .loginInner > i {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    font-size: 50px;
+    color: white;
+  }
+
+  .xi-naver {
+    color: rgb(0, 92, 0);
+  }
+  .login .xi-kakaotalk {
+    color: rgb(255, 217, 0);
+  }
+  .xi-facebook {
+    color: rgb(0, 73, 182);
+  }
+  .xi-google {
+    color: rgb(172, 0, 0);
+  }
+
+  /* ----------이벤트------------- */
+
+  .loginWraper a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .loginWraper a:hover {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+/* --------------------------------웹-------------------------------- */
+
+@media screen and (min-width: 701px) {
+  header {
+    width: 100%;
+    height: 16vh;
+    box-sizing: border-box;
+    z-index: 9999;
+    background: white;
+  }
+  nav {
+    position: fixed;
+    width: 100%;
+    height: 16vh;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 9999;
+    box-sizing: border-box;
+    background: white;
+  }
+
+  #logo {
+    width: 19vw;
+  }
+
+  i {
+    cursor: pointer;
+  }
+
+  .menu {
+    line-height: 4vw;
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+
+  .menu_list {
+    display: flex;
+  }
+
+  .menu_list > ul {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    margin-left: auto;
+    font-size: var(--fontsize--x);
+  }
+  .menu_list > ul:first-child {
+    margin-right: auto;
+    gap: 5em;
+  }
+
+  .menu_list > ul > li {
+    font-size: var(--fontsize-vw-xs);
+    padding-bottom: 0.5em;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+  }
+
+  .menu_list > ul > li:hover {
+    transform: scale(1.1);
+  }
+
+  .menu_btn {
+    display: none;
+  }
+  .utils {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2em;
+    width: 10vw;
+    font-size: 20px;
+  }
+
+  /* --------------로그인창------------- */
+  .loginWraper {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.445);
+    backdrop-filter: blur(10px);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @-webkit-keyframes scale-in-center {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .loginInner {
+    width: 500px;
+    height: 750px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.392);
+    backdrop-filter: blur(10px);
+
+    position: relative;
+    transition: all 1s ease;
+    animation: scale-in-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .closeBtn {
+    position: absolute;
+    right: -36px;
+    top: -36px;
+    color: white;
+    z-index: 999;
+  }
+
+  .loginTop {
+    width: 100%;
+    height: 150px;
+    background: #f9803ad0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .loginTitle {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .loginBottom {
+    width: 100%;
+    height: 600px;
+    padding: 2em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .userTitle {
+    height: 80px;
+    font-size: 35px;
+  }
+  form {
+    width: 400px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .loginIcon {
+    position: absolute;
+    right: 10px;
+  }
+
+  .xi-naver {
+    color: rgb(0, 92, 0);
+  }
+  .login .xi-kakaotalk {
+    color: rgb(255, 217, 0);
+  }
+  .xi-facebook {
+    color: rgb(0, 73, 182);
+  }
+  .xi-google {
+    color: rgb(172, 0, 0);
+  }
+
+  input[type^="t"],
+  input[type^="p"] {
+    width: 400px;
+    padding: 1.5em;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline-style: none;
+  }
+
+  .loginKeep {
+    width: 400px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .loginKeep input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .loginBtn {
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background-color: #ededed;
+    border: 1px solid #dcdcdc;
+    color: #5a5a5a;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #ffffff;
+  }
+  .loginBtn:hover {
+    background: linear-gradient(to bottom, #ededed 10%, #dfdfdf 80%);
+    background-color: #dfdfdf;
+    cursor: pointer;
+  }
+
+  .loginOption {
+    width: 400px;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .signUpWith {
+    width: 400px;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .signUpWith p {
+    text-decoration: underline;
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .signUpIcon {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+  }
+
+  /* ----------이벤트------------- */
+
+  .loginWraper a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .loginWraper a:hover {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+.hidden {
+  display: none;
+  transition: all 1s ease;
+}

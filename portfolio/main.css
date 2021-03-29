@@ -1,0 +1,586 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  position: relative;
+  background-color: whitesmoke;
+}
+
+main a {
+  color: black;
+}
+
+.upDownBtn {
+  width: 100px;
+  height: 300px;
+  position: fixed;
+  right: 3%;
+  top: 30%;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.upDownBtn i {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+main {
+  position: fixed;
+  left: 33vw;
+  top: 00vh;
+  width: 66vw;
+  height: 100vh;
+  display: flex;
+  font-family: "Nanum Gothic Coding", monospace;
+  transition: all 0.3s linear;
+}
+
+main.two {
+  top: 100vh;
+}
+
+section {
+  width: 66vw;
+  height: 400vh;
+}
+
+.mid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.mid > div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid_home,
+.mid_third,
+.mid_fourth,
+.mid_first {
+  width: 100%;
+  height: 100vh;
+}
+
+.mid_secondBack {
+  width: 100%;
+  height: 100vh;
+}
+
+.mid_second {
+  position: absolute;
+  top: 0;
+  left: 0vw;
+  width: 66vw;
+  height: 100vh;
+  z-index: 40;
+}
+
+.sectionTitle {
+  padding: 1vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 150px;
+  line-height: 80px;
+  width: 30vw;
+  height: 20vh;
+  z-index: 4;
+  position: absolute;
+  top: 30vh;
+  left: -31.5vw;
+  font-family: "Dhurjati", sans-serif;
+  letter-spacing: -5px;
+  color: rgb(0, 0, 0);
+}
+
+.xi-wrench,
+.xi-projector,
+.xi-emoticon-cool-o,
+.xi-reply-all {
+  font-size: 80px;
+}
+
+.sectionTitleThird {
+  font-size: 130px;
+  display: inline;
+}
+
+.sectionTitleSecond {
+  font-size: 160px;
+}
+
+.mid_first {
+  background: whitesmoke;
+}
+
+.mid_third {
+}
+.mid_fourth {
+}
+
+.mid_home {
+}
+
+.mid_box {
+  width: 90%;
+  height: 80%;
+}
+
+.sectionTitleFirst .mid_box > div {
+  width: 100%;
+  height: 33%;
+  font-family: "Nanum Gothic Coding", monospace;
+}
+
+.mid_home_box_top {
+  height: 33%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+
+.mid_home_box_top h1 {
+  font-size: 80px;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.mid_home_box_top p {
+  line-height: 25px;
+}
+
+.mid_home_box_mid {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.mid_home_box_bottom {
+  display: flex;
+  align-items: center;
+  font-size: 45px;
+  position: relative;
+}
+
+.mid_home_box_bottom > p {
+  animation: blink-1 1.5s infinite;
+}
+
+.mid_home_box_bottom img {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 6;
+}
+
+.resume {
+  width: 20%;
+  height: 150%;
+  padding: 20px;
+  position: absolute;
+  right: 50px;
+  bottom: 30%;
+  font-size: 16px;
+  line-height: 25px;
+  font-family: sans-serif;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
+@-webkit-keyframes blink-1 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+}
+
+.skillsIcon {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 16px;
+}
+
+.xi-html5 {
+  color: #e55126;
+}
+.xi-css3 {
+  color: #1d8cc8;
+}
+.xi-adobe {
+  color: #e1251a;
+}
+.xi-javascript {
+  color: rgb(255, 153, 0);
+}
+
+.skillsIcon li {
+  display: flex;
+  width: 49%;
+  align-items: center;
+}
+
+.skillsIcon li div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skillsIcon li div h3 {
+  font-size: 25px;
+  line-height: 30px;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.skillsIcon li div p {
+  margin-left: 2px;
+}
+
+.skillsDescribe {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 60%;
+}
+
+.skillsDescribe h2 {
+  font-size: 80px;
+  line-height: 120px;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.skillsDescribe p {
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.skillsDescribe span {
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+.skillsDescribe ul {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.skillsDescribe li {
+  font-size: 16px;
+}
+/* ------------------------------------------------ */
+
+.sectionTitleThird {
+  z-index: 999;
+}
+
+.mid_third {
+  position: relative;
+}
+
+.mid_third_box::-webkit-scrollbar {
+  display: none;
+}
+
+.mid_third_box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+}
+
+.myWorkBtn {
+  position: absolute;
+  right: 5%;
+  top: 40%;
+  width: 5vw;
+  height: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  z-index: 90;
+}
+
+.myWorkBtn div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.myWork {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myWorkInner {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.myWorkInner > div {
+  width: 100%;
+}
+.myWorkTop {
+  height: 40%;
+
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.myWorkTop > a {
+  width: 50%;
+}
+.myWorkTop > a img {
+  width: 100%;
+}
+
+.myWorkTop > div {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.myWorkTop > div > p {
+  box-sizing: border-box;
+  font-size: 60px;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.myWorkBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.myWorkBox > p {
+  box-sizing: border-box;
+  padding-top: 5%;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-size: 15px;
+  position: relative;
+}
+
+.myWorkBottom {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Nanum Gothic Coding", monospace;
+}
+
+.myWorkBottom h1 {
+  font-size: 40px;
+  line-height: 90px;
+}
+
+.myWorkBottom p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: auto;
+}
+
+.myWorkBottom > div {
+  display: flex;
+  height: 30%;
+}
+
+.myWorkBottom > div > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.myWorkBottom > div > div > div {
+  display: flex;
+  gap: 10%;
+}
+
+.Oswald {
+  font-family: "Oswald", sans-serif;
+}
+.Libre {
+  font-family: "Libre Baskerville", serif;
+}
+.Gloria {
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.Inter {
+  font-family: "Inter", sans-serif;
+}
+.Playfair {
+  font-family: "Playfair Display", serif;
+}
+.Anton {
+  font-family: "Anton", sans-serif;
+}
+
+.Raleway {
+  font-family: "Raleway", sans-serif;
+}
+.Krona {
+  font-family: "Krona One", sans-serif;
+}
+.Sans-serif {
+  font-family: sans-serif;
+}
+
+.colors {
+  font-family: sans-serif;
+  letter-spacing: 5px;
+}
+
+.c00000 {
+  background: #000;
+  color: white;
+}
+
+.cffc600 {
+  background: #ffc600;
+  color: white;
+}
+
+.c5b2807 {
+  background: #5b2807;
+  color: white;
+}
+
+.cf9813a {
+  background-color: #f9813a;
+  color: white;
+}
+.cF5F5F5 {
+  background-color: #f5f5f5;
+}
+
+.c01010D {
+  background-color: #01010d;
+  color: white;
+}
+.cBD0003 {
+  background-color: #bd0003;
+  color: white;
+}
+.c9F9FA2 {
+  background-color: #9f9fa2;
+}
+
+/* ------------------------------------------------ */
+
+.mid_fourth_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contactTitle {
+  width: 80%;
+  font-size: 200px;
+  font-family: "Do Hyeon", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contactTitle span {
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.mid_fourth ul {
+  width: 100%;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mid_fourth li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.xi-kakaotalk {
+}

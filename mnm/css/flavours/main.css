@@ -1,0 +1,598 @@
+:root {
+  /* color */
+  --color--brown: #5b2807;
+  --color--yellow: #ffc600;
+  --color--green: #138942;
+  --color--red: #ff2c00;
+  --color--blue: #095d98;
+  --color--orange: #e8631c;
+  --color--white: rgb(240, 240, 240);
+  --wraper: 75vw;
+  --wraper-mobile: 90vw;
+  --inner: rgb(234, 176, 138);
+
+  /*font-size*/
+  --font--h1: 50px;
+  --font--h2: 35px;
+  --font--h3: 24px;
+
+  /*LH*/
+  --h1--LH: 50px;
+  --h1--LH: 50px;
+  --h3--LH: 50px;
+
+  /*border-radius*/
+  --border-radius: 25px;
+
+  /*checking*/
+  --check--: 2px solid red;
+
+  /*font-family: 'Architects Daughter', cursive;
+          font-family: 'Gloria Hallelujah', cursive;
+          font-family: 'Libre Baskerville', serif;
+          font-family: 'Oswald', sans-serif;*/
+
+  --fonts-main: "Oswald", sans-serif;
+  --fonts-sub: "Libre Baskerville", serif;
+  --fonts-sub2: "Gloria Hallelujah", cursive;
+  --fonts-sub3: "Noto Sans", sans-serif;
+
+  --adv-text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4,
+    2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd,
+    3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 2px 2px 2px rgba(206, 89, 55, 0);
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    width: 100vw;
+    height: 90vh;
+    background-color: var(--color--yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    background: url(../../imgs/secondSectionBackground2.png) no-repeat
+      center/cover;
+  }
+  /*---------------------------------fistsection--------------------------------------*/
+
+  .flavours {
+    width: var(--wraper);
+    height: 65vh;
+    border: 5px solid var(--color--brown);
+    border-radius: var(--border-radius);
+    position: relative;
+    overflow: hidden;
+    background: var(--color--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .flavoursInfoWraper {
+    width: 100%;
+    height: 80%;
+    position: relative;
+  }
+
+  .pop {
+    z-index: 3;
+  }
+
+  .flavoursInfo {
+    background: var(--color--white);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .flavoursInfo > div {
+    width: 50%;
+    height: 100%;
+  }
+
+  .flavoursDetails {
+    border-radius: 50px 0 50px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: var(--fonts-main);
+    position: relative;
+  }
+
+  .crispy .flavoursDetails {
+    background-color: #1fa2d0;
+  }
+  .milk .flavoursDetails {
+    background-color: #744304;
+  }
+
+  .nutritionTitle {
+    height: 15%;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 0px rgb(255 255 255 / 30%);
+  }
+
+  .nutritionTable {
+    width: 100%;
+    height: 45%;
+  }
+
+  .nutritionTable ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .nutritionTable li {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 6px dotted rgba(255, 255, 255, 0.528);
+    padding: 3%;
+    box-sizing: border-box;
+  }
+
+  .nutritionTable li:last-child {
+    border: none;
+  }
+
+  .nutrition {
+    font-family: var(--fonts-sub);
+    font-size: 30px;
+    text-align: left;
+    filter: contrast(1);
+  }
+
+  .milk .nutrition {
+    color: rgb(192, 115, 79);
+  }
+  .crispy .nutrition {
+    color: var(--color--blue);
+  }
+
+  .nutritionData {
+    font-size: 45px;
+    font-weight: 500;
+    text-align: right;
+    color: white;
+  }
+  .nutritionData span {
+    font-size: 20px;
+  }
+
+  .nutritionBox {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .nutiritonBtn {
+    font-size: 25px;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 0.3s all linear;
+    box-sizing: border-box;
+  }
+
+  .nutiritonBtn:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  .nutiritonBtn:hover ~ .more {
+    opacity: 1;
+  }
+
+  .milk .more {
+    background: #744304;
+  }
+  .crispy .more {
+    background: #1fa2d0;
+  }
+
+  .more {
+    position: absolute;
+    bottom: 200%;
+    width: 95%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    transition: 0.5s all linear;
+    opacity: 0;
+  }
+
+  .more img {
+    height: 90%;
+  }
+
+  .flavoursInfoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flavoursMain {
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flavoursMainPic {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flavoursMainPic img {
+    position: absolute;
+    width: 90%;
+  }
+
+  .flavoursInfoList dl {
+    font-family: var(--fonts-main);
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .flavoursInfoList dd {
+    letter-spacing: 1.5px;
+  }
+
+  .flavoursInfoList dt {
+    font-family: var(--fonts-sub);
+    font-size: 20px;
+    font-weight: 100;
+  }
+
+  .flavoursInfoList ul {
+    width: 60%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flavoursInfoList li {
+    opacity: 0.5;
+  }
+  .flavoursInfoList li:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .flavoursInfoList li.view {
+    opacity: 1;
+  }
+
+  .flavoursList {
+    width: 100%;
+    height: 20%;
+    padding: 0 20px 20px 20px;
+    box-sizing: border-box;
+  }
+
+  .flavoursList ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .flavoursList li {
+    font-family: var(--fonts-main);
+    color: var(--color--brown);
+    font-size: 30px;
+    opacity: 0.4;
+    font-weight: 500;
+  }
+
+  .flavoursList li:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .flavoursList li.on {
+    opacity: 1;
+    text-decoration: solid line-through rgba(255, 25, 0, 0.529) 5px;
+  }
+}
+
+/*---------------------------------mobile--------------------------------------*/
+/*---------------------------------mobile--------------------------------------*/
+/*---------------------------------mobile--------------------------------------*/
+/*---------------------------------mobile--------------------------------------*/
+/*---------------------------------mobile--------------------------------------*/
+/*---------------------------------mobile--------------------------------------*/
+/*---------------------------------mobile--------------------------------------*/
+
+@media screen and (max-width: 900px) {
+  main {
+    padding-top: 15px;
+    width: 100vw;
+    height: 120vh;
+    background-color: var(--color--yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    background: var(--color--yellow);
+  }
+  /*---------------------------------fistsection--------------------------------------*/
+
+  .flavours {
+    width: var(--wraper-mobile);
+    height: 100%;
+    border: 5px solid var(--color--brown);
+    border-radius: var(--border-radius);
+    position: relative;
+    overflow: hidden;
+    background: var(--color--white);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+
+  .flavoursInfoWraper {
+    width: 100%;
+    height: 80%;
+    position: relative;
+  }
+
+  .pop {
+    z-index: 3;
+  }
+
+  .flavoursInfo {
+    background: var(--color--white);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .flavoursInfo > div {
+    width: 100%;
+    height: 100%;
+  }
+
+  .flavoursDetails {
+    border-radius: 50px 0 50px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: var(--fonts-main);
+    position: relative;
+  }
+
+  .crispy .flavoursDetails {
+    background-color: #1fa2d0;
+  }
+  .milk .flavoursDetails {
+    background-color: #744304;
+  }
+
+  .nutritionTitle {
+    height: 15%;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 0px rgb(255 255 255 / 30%);
+  }
+
+  .nutritionTable {
+    width: 100%;
+    height: 45%;
+  }
+
+  .nutritionTable ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .nutritionTable li {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3%;
+    box-sizing: border-box;
+  }
+
+  .nutritionTable li:last-child {
+    border: none;
+  }
+
+  .nutrition {
+    font-family: var(--fonts-sub);
+    font-size: 4vw;
+    text-align: left;
+    filter: contrast(1);
+  }
+
+  .milk .nutrition {
+    color: rgb(192, 115, 79);
+  }
+  .crispy .nutrition {
+    color: var(--color--blue);
+  }
+
+  .nutritionData {
+    font-size: 6vw;
+    font-weight: 500;
+    text-align: right;
+    color: white;
+  }
+  .nutritionData span {
+    font-size: 4vw;
+  }
+
+  .nutritionBox {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .nutiritonBtn {
+    font-size: 25px;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 0.3s all linear;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  .more {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+  }
+
+  .more img:nth-child(1) {
+    width: 40%;
+  }
+
+  .more img:nth-child(2) {
+    width: 50%;
+  }
+
+  .flavoursInfoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flavoursMain {
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .flavoursMainPic {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flavoursMainPic img {
+    position: absolute;
+    width: 100%;
+  }
+
+  .flavoursInfoList dl {
+    font-family: var(--fonts-main);
+    width: 50%;
+    text-align: center;
+    font-size: 7vw;
+    line-height: 30px;
+  }
+
+  .flavoursInfoList dd {
+    letter-spacing: 1.5px;
+  }
+
+  .flavoursInfoList dt {
+    font-family: var(--fonts-sub);
+    font-size: 20px;
+    font-weight: 100;
+  }
+
+  .flavoursInfoList ul {
+    display: none;
+  }
+
+  .flavoursInfoList li {
+    opacity: 0.5;
+  }
+  .flavoursInfoList li:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .flavoursInfoList li.view {
+    opacity: 1;
+  }
+
+  .flavoursList {
+    width: 100%;
+    height: 20%;
+    padding: 0 20px 20px 20px;
+    box-sizing: border-box;
+  }
+
+  .flavoursList ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .flavoursList li {
+    width: 50%;
+    font-family: var(--fonts-main);
+    color: var(--color--brown);
+    font-size: 5vw;
+    text-align: center;
+    opacity: 0.4;
+    font-weight: 500;
+  }
+
+  .flavoursList li:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .flavoursList li.on {
+    opacity: 1;
+    text-decoration: solid line-through rgba(255, 25, 0, 0.529) 5px;
+  }
+}

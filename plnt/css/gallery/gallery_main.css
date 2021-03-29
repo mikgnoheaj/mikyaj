@@ -1,0 +1,407 @@
+:root {
+  /* ----font-size---- */
+  --fontsize--xs: 15px;
+  --fontsize--s: 25px;
+  --fontsize--m: 30px;
+  --fontsize--l: 35px;
+  --fontsize--xl: 40px;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    width: 100vw;
+    height: 80vh;
+    box-sizing: border-box;
+  }
+
+  .social_network {
+    display: none;
+  }
+
+  .gallery_container {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+
+  .gallery_title_web {
+    display: none;
+  }
+
+  .gallery_title_mobile {
+    text-align: center;
+    width: 80%;
+    height: 20%;
+    position: absolute;
+    left: 10%;
+    top: 45%;
+    font-size: 8vw;
+    text-shadow: 4px 3px 0px #5050506e;
+  }
+
+  .gallery_container > ul {
+    width: 100%;
+    height: 100%;
+    gap: 0.5em;
+    display: grid;
+    grid-column: 1fr 1fr 1fr;
+  }
+
+  .gallery_container > ul > li {
+    background-color: burlywood;
+    transition: all 1s ease;
+  }
+
+  .g1 {
+    grid-column: span 2/1;
+    grid-row: span 3;
+    overflow: hidden;
+  }
+
+  .g2 {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .g5 {
+    grid-column: span 2;
+  }
+
+  .g1 > div {
+    transition: all 1s ease;
+  }
+
+  .season2 .g1 {
+    grid-column: span 1/1;
+    grid-row: span 2;
+    background: url(../../imgs/season1/Image1-1.png) no-repeat 0 / cover;
+  }
+  .season2 .g2 {
+    grid-column: span 2;
+    grid-row: span 3;
+    background: url(../../imgs/season1/Image1-2.png) no-repeat 0 / cover;
+  }
+  .season2 .g3 {
+    grid-column: span 1;
+    grid-row: span 3;
+    background: url(../../imgs/season1/Image1-3.png) no-repeat 0 / cover;
+  }
+  .season2 .g4 {
+    grid-column: span 1;
+    grid-row: span 3;
+    background: url(../../imgs/season1/Image1-4.png) no-repeat 0 / cover;
+  }
+  .season2 .g5 {
+    grid-column: span 3;
+    grid-row: span 2;
+    background: url(../../imgs/season1/Image1-5.png) no-repeat 0 / cover;
+  }
+  .season2 .g6 {
+    grid-column: span 3;
+    grid-row: span 3;
+    background: url(../../imgs/season1/Image1-6.png) no-repeat 0 / cover;
+  }
+  .season2 .g7 {
+    grid-column: span 1;
+    grid-row: span 5;
+    background: url(../../imgs/season1/Image1-7.png) no-repeat 0 / cover;
+  }
+  .season2 .g8 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: url(../../imgs/season1/Image1-8.png) no-repeat 0 / cover;
+  }
+  .season2 .g9 {
+    grid-column: span 1;
+    grid-row: span 2;
+    background: url(../../imgs/season1/Image1-9.png) no-repeat 0 / cover;
+  }
+
+  .season1 .g1 {
+    grid-column: span 1/1;
+    grid-row: span 2;
+    background: url(../../imgs/season2/Image2-1.png) no-repeat 0 / cover;
+  }
+  .season1 .g2 {
+    grid-column: span 2;
+    grid-row: span 3;
+    background: url(../../imgs/season2/Image2-2.png) no-repeat 0 / cover;
+  }
+  .season1 .g3 {
+    grid-column: span 1;
+    grid-row: span 3;
+    background: url(../../imgs/season2/Image2-3.png) no-repeat 0 / cover;
+  }
+  .season1 .g4 {
+    grid-column: span 1;
+    grid-row: span 3;
+    background: url(../../imgs/season2/Image2-4.png) no-repeat 0 / cover;
+  }
+  .season1 .g5 {
+    grid-column: span 3;
+    grid-row: span 2;
+    background: url(../../imgs/season2/Image2-6.png) no-repeat 0 / cover;
+  }
+  .season1 .g6 {
+    grid-column: span 3;
+    grid-row: span 3;
+    background: url(../../imgs/season2/Image2-5.png) no-repeat 0 / cover;
+  }
+  .season1 .g7 {
+    grid-column: span 1;
+    grid-row: span 5;
+    background: url(../../imgs/season2/Image2-7.png) no-repeat 0 / cover;
+  }
+  .season1 .g8 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: url(../../imgs/season2/Image2-6.png) no-repeat 0 / cover;
+  }
+  .season1 .g9 {
+    grid-column: span 1;
+    grid-row: span 2;
+    background: url(../../imgs/season2/Image2-8.png) no-repeat 0 / cover;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  main {
+    width: 100vw;
+    height: 74vh;
+    overflow-y: scroll;
+    position: relative;
+    background: white;
+  }
+
+  main::-webkit-scrollbar {
+    display: none;
+  }
+
+  .clickedImg {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 255, 0.336);
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 9999;
+    display: none;
+  }
+
+  .social_network {
+    width: 12vw;
+    position: fixed;
+    left: 5%;
+    top: 18%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    z-index: 10;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+    font-size: 1.2vw;
+  }
+
+  .social_network:hover {
+    opacity: 1;
+  }
+
+  .social_network > p {
+    text-align: end;
+  }
+
+  .social_network > ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2em;
+  }
+
+  .social_network li,
+  a,
+  i {
+    color: black;
+  }
+
+  .gallery_title_mobile {
+    display: none;
+  }
+  .gallery_title_web {
+    width: 15vw;
+    height: 20vh;
+    position: fixed;
+    left: 5%;
+    top: 40%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .gallery_title_web h1 {
+    font-size: var(--fontsize--m);
+    height: 50%;
+  }
+
+  .gallery_title_web > ul {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: var(--fontsize--s);
+  }
+
+  .gallery_title_web li {
+    text-align: left;
+    width: 70%;
+    color: rgb(151, 151, 151);
+    cursor: pointer;
+    font-size: 25px;
+  }
+
+  .gallery_title_web li.select {
+    color: black;
+    text-decoration: underline 0.5px solid black;
+  }
+
+  .gallery_title_web li:hover {
+    color: rgb(32, 32, 32);
+  }
+
+  .gallery_container {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    background: white;
+  }
+
+  .season1 {
+    background: white;
+    opacity: 0.5;
+  }
+
+  .season2 {
+    background: white;
+    opacity: 0.5;
+  }
+
+  .gallery_container > ul {
+    margin-left: 24.5%;
+    width: 73%;
+    display: grid;
+    gap: 1em;
+    grid-auto-rows: minmax(110px, auto);
+  }
+
+  .gallery_container > ul > li {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .gallery_container > ul > li:hover {
+    transform: scale(1.01);
+  }
+
+  .season2 .g1 {
+    grid-column: span 1/1;
+    grid-row: span 2;
+    background: url(../../imgs/season1/Image1-1.png) no-repeat 0 / cover;
+  }
+  .season2 .g2 {
+    grid-column: span 2;
+    grid-row: span 3;
+    background: url(../../imgs/season1/Image1-2.png) no-repeat 0 / cover;
+  }
+  .season2 .g3 {
+    grid-column: span 1;
+    grid-row: span 3;
+    background: url(../../imgs/season1/Image1-3.png) no-repeat 0 / cover;
+  }
+  .season2 .g4 {
+    grid-column: span 1;
+    grid-row: span 3;
+    background: url(../../imgs/season1/Image1-4.png) no-repeat 0 / cover;
+  }
+  .season2 .g5 {
+    grid-column: span 3;
+    grid-row: span 2;
+    background: url(../../imgs/season1/Image1-5.png) no-repeat 0 / cover;
+  }
+  .season2 .g6 {
+    grid-column: span 3;
+    grid-row: span 3;
+    background: url(../../imgs/season1/Image1-6.png) no-repeat 0 / cover;
+  }
+  .season2 .g7 {
+    grid-column: span 1;
+    grid-row: span 5;
+    background: url(../../imgs/season1/Image1-7.png) no-repeat 0 / cover;
+  }
+  .season2 .g8 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: url(../../imgs/season1/Image1-8.png) no-repeat 0 / cover;
+  }
+  .season2 .g9 {
+    grid-column: span 1;
+    grid-row: span 2;
+    background: url(../../imgs/season1/Image1-9.png) no-repeat 0 / cover;
+  }
+
+  .season1 .g1 {
+    grid-column: span 1/1;
+    grid-row: span 2;
+    background: url(../../imgs/season2/Image2-1.png) no-repeat 0 / cover;
+  }
+  .season1 .g2 {
+    grid-column: span 2;
+    grid-row: span 3;
+    background: url(../../imgs/season2/Image2-2.png) no-repeat 0 / cover;
+  }
+  .season1 .g3 {
+    grid-column: span 1;
+    grid-row: span 3;
+    background: url(../../imgs/season2/Image2-3.png) no-repeat 0 / cover;
+  }
+  .season1 .g4 {
+    grid-column: span 1;
+    grid-row: span 3;
+    background: url(../../imgs/season2/Image2-4.png) no-repeat 0 / cover;
+  }
+  .season1 .g5 {
+    grid-column: span 3;
+    grid-row: span 2;
+    background: url(../../imgs/season2/Image2-6.png) no-repeat 0 / cover;
+  }
+  .season1 .g6 {
+    grid-column: span 3;
+    grid-row: span 3;
+    background: url(../../imgs/season2/Image2-5.png) no-repeat 0 / cover;
+  }
+  .season1 .g7 {
+    grid-column: span 1;
+    grid-row: span 5;
+    background: url(../../imgs/season2/Image2-7.png) no-repeat 0 / cover;
+  }
+  .season1 .g8 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: url(../../imgs/season2/Image2-6.png) no-repeat 0 / cover;
+  }
+  .season1 .g9 {
+    grid-column: span 1;
+    grid-row: span 2;
+    background: url(../../imgs/season2/Image2-8.png) no-repeat 0 / cover;
+  }
+
+  .clicked {
+    z-index: 2;
+    opacity: 1;
+    transition: 1s all linear;
+  }
+}

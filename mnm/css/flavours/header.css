@@ -1,0 +1,254 @@
+:root {
+  /* color */
+  --color--brown: #5b2807;
+  --color--yellow: #ffc600;
+  --color--green: #138942;
+  --color--red: #ff2c00;
+  --color--blue: #095d98;
+  --color--orange: #e8631c;
+  --color--white: rgb(240, 240, 240);
+  --wraper: 75vw;
+  --wraper-mobile: 90vw;
+  --inner: rgb(234, 176, 138);
+
+  /*font-size*/
+  --font--h1: 50px;
+  --font--h2: 35px;
+  --font--h3: 24px;
+
+  /*LH*/
+  --h1--LH: 50px;
+  --h1--LH: 50px;
+  --h3--LH: 50px;
+
+  /*border-radius*/
+  --border-radius: 25px;
+
+  /*checking*/
+  --check--: 2px solid red;
+
+  /*font-family: 'Architects Daughter', cursive;
+          font-family: 'Gloria Hallelujah', cursive;
+          font-family: 'Libre Baskerville', serif;
+          font-family: 'Oswald', sans-serif;*/
+
+  --fonts-main: "Oswald", sans-serif;
+  --fonts-sub: "Libre Baskerville", serif;
+  --fonts-sub2: "Gloria Hallelujah", cursive;
+  --fonts-sub3: "Noto Sans", sans-serif;
+
+  --adv-text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4,
+    2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd,
+    3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 2px 2px 2px rgba(206, 89, 55, 0);
+}
+/*---------------------------------aside--------------------------------------*/
+
+/*---------------------------------header--------------------------------------*/
+
+a {
+  color: brown;
+}
+
+header {
+  width: 100vw;
+  height: 10vh;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  background-color: var(--color--yellow);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fonts-main);
+}
+nav {
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.MainLogo {
+  display: none;
+}
+
+.smallLogo {
+  width: 20%;
+}
+
+.smallLogo img {
+  width: 100%;
+}
+
+.appListBtn {
+  display: none;
+}
+
+.smallLogo {
+  width: 20%;
+}
+.mainMenu {
+  width: 60%;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5vw;
+  font-weight: 600;
+  cursor: pointer;
+  color: brown;
+}
+
+.mainMenu li {
+  transition: all 0.5s ease;
+}
+
+.mainMenu li:hover {
+  transform: scale(1.2);
+  animation: wavy 1s infinite;
+}
+
+@keyframes wavy {
+  0% {
+    text-decoration: red wavy underline;
+  }
+  25% {
+    text-decoration: white wavy underline;
+  }
+  50% {
+    text-decoration: blue wavy underline;
+  }
+  75% {
+    text-decoration: yellow wavy underline;
+  }
+  100% {
+    text-decoration: red wavy underline;
+  }
+}
+
+.utils {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+i {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  a {
+    color: brown;
+  }
+
+  header {
+    width: 100vw;
+    height: 5vh;
+    position: relative;
+    z-index: 5;
+  }
+  nav {
+    width: var(--wraper-mobile);
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+  }
+
+  nav > a {
+    display: none;
+  }
+
+  .MainLogo {
+    display: none;
+  }
+
+  .smallLogo {
+    display: block;
+    width: 45%;
+  }
+
+  .appListBtn {
+    display: block;
+    color: var(--color--brown);
+  }
+  .mainMenu {
+    position: absolute;
+    z-index: 1;
+    left: -5vw;
+    top: 190%;
+    width: 100vw;
+    height: 190vh;
+    background-color: var(--color--yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5vw;
+    font-weight: 600;
+    justify-content: flex-start;
+    cursor: pointer;
+    color: brown;
+    transition: all 0.5s linear;
+    display: none;
+  }
+
+  .mainMenu.activeMenu {
+    display: flex;
+  }
+
+  .mainMenu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+
+    animation: menuOn 1.5s ease;
+  }
+  @keyframes menuOn {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .mainMenu li:hover {
+    transform: scale(1.2);
+    animation: wavy 1s infinite;
+  }
+
+  @keyframes wavy {
+    0% {
+      text-decoration: red wavy underline;
+    }
+    25% {
+      text-decoration: white wavy underline;
+    }
+    50% {
+      text-decoration: blue wavy underline;
+    }
+    75% {
+      text-decoration: yellow wavy underline;
+    }
+    100% {
+      text-decoration: red wavy underline;
+    }
+  }
+
+  .utils {
+    display: none;
+  }
+
+  i {
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

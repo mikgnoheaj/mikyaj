@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index/header.css">
+    <link rel="stylesheet" href="css/gallery/gallery_main.css">
+    <link rel="stylesheet" href="css/index/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Krona+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Document</title>
+
+
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        html {
+            font-family: 'Raleway', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1 {
+            font-family: 'Krona One', sans-serif;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../plnt/plnt.html" class="logo"><img id="logo" src="imgs/plnt_logo.png" alt="로고"></a>
+            <div class="menu">
+                <div class="menu_list">
+                    <ul>
+                        <li><a href="../plnt/plnt.html#productTitle">Product</a></li>
+                        <li><a href="../plnt/gallery_plnt.html">Gallery</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Q&A</a></li>
+                    </ul>
+                </div>
+                <p class="menu_btn"><a href="#">MENU</a></p>
+                <ul class="utils">
+                    <li>
+                        <i class="xi-profile xi-2x login"></i>
+                    </li>
+                    <div class="loginWraper hidden">
+                        <div class="loginInner">
+                            <i class="xi-close-circle xi-3x closeBtn"></i>
+                            <div class="loginTop">
+                                <h1 class="loginTitle">We always make <br> accessories that <br> suit everyone's tastes.</h1>
+                            </div>
+                            <div class="loginBottom">
+                                <p class="userTitle">Hello You!</p>
+                                <form action="test">
+                                        <input type="text" placeholder="아이디">
+                                        <input type="password"  placeholder="비밀번호">
+                                    <div class="loginKeep">
+                                        <input type="checkbox">
+                                        <p><a href="#"> keep in login</a></p>
+                                    </div>
+                                    <button class="loginBtn">Login</button>
+                                </form>
+                                <div class="loginOption">
+                                    <p><a href="#">forgot password?</a></p>
+                                    <p><a href="#">register</a></p>
+                                </div>
+                                <div class="signUpWith">
+                                    <p>or <br> sign up with</p>
+                                    <div class="signUpIcon">
+                                        <i class="xi-naver xi-3x"></i>
+                                        <i class="xi-kakaotalk xi-3x"></i>
+                                        <i class="xi-facebook xi-3x"></i>
+                                        <i class="xi-google xi-3x"></i>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <li class="basket"><a href="#"><i class="xi-basket xi-2x"></i></a></li>
+                </ul>
+            </div>
+
+
+        </nav>
+    </header>
+
+
+
+
+
+    <main>
+        <div class="clickedImg">
+
+        </div>
+        <div class="gallery_title_web">
+            <h1>Collection List</h1>
+            <ul>
+                <li class="galleryBtn galleryBtnFirst select">Gem Power</li>
+                <li class="galleryBtn galleryBtnSecond">Essential part.1</li>
+            </ul>
+        </div>
+        <div class="social_network">
+            <p>✱ established in 2020</p>
+            <ul>
+                <li><a href="#"><i class="xi-instagram xi-2x"></i></a></li>
+                <li><a href="#"><i class="xi-mail xi-2x"></i></a></li>
+                <li><a href="#"><i class="xi-kakaotalk xi-2x"></i></a></li>
+            </ul>
+        </div>
+        <section class="gallery_container season1 clicked">
+            <h1 class="gallery_title_mobile">Gem Power<br>Collection</h1>
+            <ul>
+                <li class="g1 bigImage"></li>
+                <li class="g2"></li>
+                <li class="g3"></li>
+                <li class="g4"></li>
+                <li class="g5"></li>
+                <li class="g6"></li>
+                <li class="g7"></li>
+                <li class="g8"></li>
+                <li class="g9"></li>
+            </ul>
+        </section>
+        <section class="gallery_container season2">
+            <h1 class="gallery_title_mobile">Essential Collection</h1>
+            <ul>
+                <li class="g1"></li>
+                <li class="g2"></li>
+                <li class="g3"></li>
+                <li class="g4"></li>
+                <li class="g5"></li>
+                <li class="g6"></li>
+                <li class="g7"></li>
+                <li class="g8"></li>
+                <li class="g9"></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="address_info">
+            <ul>
+                <li>플랜트(PLNT)</li>
+                <li>대표: 이은하</li>
+                <li><span>010-6219-9350</span></li>
+                <li><span>info@plnt.kr</span></li>
+            </ul>
+        </div>
+        <address>
+           <p> 경기도 성남시 분당구 정자일로 46 사업자등록번호: 639-18-01175</p>
+        </address>
+
+        <div class="address_info2">
+            <ul>
+                <li><a href="#" onclick="return false">이용약관</a></li>
+                <li><a href="#" onclick="return false">개인정보처리방침</a></li>
+                <li><a href="#" onclick="return false">사업자정보확인</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="../plnt/js/gallery_plnt.js"></script>
+</body>
+
+</html>
