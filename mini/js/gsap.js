@@ -28,10 +28,10 @@ jcwintro
 let histoy_board = gsap.timeline({
     scrollTrigger: {
         trigger: '.jcw_contain2',
-        start: '10% 80%',
-        end: '90% 0%',
+        start: '90% 80%',
+        end: '70% -80%',
         scrub: 1,
-
+markers:true,
     }
 })
 
