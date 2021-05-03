@@ -1,0 +1,290 @@
+:root {
+  /* 폰트 */
+  --font-korean: "Noto Sans KR", sans-serif;
+  --font-english: "Prompt", sans-serif;
+  --font-title: "News Cycle", sans-serif;
+  --font-titleSub: "Red Hat Display";
+
+  /* 폰트사이즈 */
+
+  --fontsize-smallTitle: 15px;
+  --fontsize-title: 100px;
+  --fontsize-sectionTitle: 800px;
+
+  /* 컬러 */
+
+  --color-background: #212121;
+  --color-yellow: #f79e1b;
+  --color-red: #eb001b;
+  --color-orange: #ff5f00;
+  --color-gray-light: #f1f1f1;
+  --color-gray-dark: rgb(55, 55, 55);
+}
+
+html {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* ------------------------------요소-------------------------------------------- */
+
+.korean {
+  font-family: var(--font-korean);
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+h1 {
+  font-size: var(--fontsize-title);
+  color: white;
+  text-shadow: 3px 3px 5px rgb(121, 121, 121);
+}
+
+h2 {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-english);
+  font-weight: 100;
+  font-size: 4vw;
+  line-height: 4.1vw;
+  color: var(--color-gray-light);
+  text-shadow: -2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-english);
+  font-size: 3.5vw;
+  color: var(--color-gray-light);
+}
+
+.smallTitleEnglish {
+  font-size: 15px;
+  color: #000000;
+  font-weight: bold;
+  letter-spacing: 0;
+  font-family: var(--font-korean);
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 1px rgba(128, 128, 128, 0.1);
+  line-height: 20px;
+}
+
+.smallTitleOrange {
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--color-yellow);
+}
+
+.smallTitleKorean {
+  font-size: 15px;
+  line-height: 25px;
+  color: #606060;
+  font-family: var(--font-korean);
+}
+
+.logoWithTitle {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-yellow);
+}
+
+.businessSmallTitle {
+  font-size: 35px;
+  line-height: 40px;
+  color: var(--color-yellow);
+}
+
+.pdf {
+  color: var(--color-gray-light);
+  width: 450px;
+  height: 100px;
+  border: 1px solid var(--color-gray-dark);
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 2s ease;
+}
+
+.pdf:hover,
+.pdf:hover .pdfBtn {
+  border: 1px solid var(--color-gray-light);
+  color: var(--color-gray-light);
+}
+
+.pdfTitle {
+  font-size: 20px;
+  line-height: 30px;
+  cursor: default;
+}
+
+.pdfBtn {
+  color: var(--color-gray-dark);
+  background: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-weight: 100;
+  border: 1px solid;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease;
+}
+
+/* ------------------------------------메인 flash-------------------------------------- */
+
+body {
+  background-color: var(--color-background);
+}
+
+main {
+  width: 100%;
+  margin-top: 70px;
+  background-color: var(--color-background);
+}
+
+section {
+  margin: 0 auto;
+  width: 95%;
+  height: 80vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  color: #f1f1f1;
+  padding: 20px 0;
+}
+
+.businessSection:last-of-type {
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--color-gray-dark);
+}
+
+.sectionWrapper {
+  width: 70%;
+  min-width: 1000px;
+}
+
+.firstSection,
+.easySaving {
+  height: 20%;
+  border-top: 1px solid var(--color-gray-dark);
+  border-bottom: 1px solid var(--color-gray-dark);
+}
+
+.firstSection {
+  margin-bottom: 80px;
+}
+
+.firstSectionWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*------------------------------------------------------------------------- */
+
+.businessInner {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.businessPic {
+  width: 35%;
+}
+
+.smallBusinessPic {
+  background: url(../../imgs/pics/smallBusiness.png) no-repeat center/cover;
+}
+
+.bigBusinessPic {
+  background: url(../../imgs/pics/bigBusiness.png) no-repeat center/cover;
+}
+
+.businessDescribe {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+dl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.businessDescribeBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------------------- */
+
+.easySaving {
+  padding: 25px 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin: 80px auto;
+}
+.easySavingList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  width: 40%;
+}
+
+.easySavingList ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.easySavingList ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-gray-dark);
+}
+
+.easySavingLogo {
+  width: 200px;
+}
+.easySavingNumbers {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.easySavingNumbers span {
+  font-size: 150px;
+  line-height: 100px;
+  color: var(--color-yellow);
+}
+
+.easySavingNumbers {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}

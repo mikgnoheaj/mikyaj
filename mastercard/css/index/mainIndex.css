@@ -1,0 +1,393 @@
+:root {
+  /* 폰트 */
+  --font-korean: "Noto Sans KR", sans-serif;
+  --font-english: "Prompt", sans-serif;
+  --font-title: "News Cycle", sans-serif;
+  --font-titleSub: "Red Hat Display";
+
+  /* 폰트사이즈 */
+
+  --fontsize-smallTitle: 15px;
+  --fontsize-title: 80px;
+  --fontsize-sectionTitle: 800px;
+
+  /* 컬러 */
+
+  --color-background: #919191;
+  --color-yellow: #f79e1b;
+  --color-red: #eb001b;
+  --color-orange: #ff5f00;
+  --color-gray-light: #f1f1f1;
+  --color-gray-dark: rgb(55, 55, 55);
+}
+
+html {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* ------------------------------요소-------------------------------------------- */
+
+.korean {
+  font-family: var(--font-korean);
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+h1 {
+  font-size: 4vw;
+  color: white;
+  text-shadow: 3px 3px 5px rgb(121, 121, 121);
+}
+
+h2 {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-english);
+  font-weight: 100;
+  font-size: 50px;
+  line-height: 45px;
+  color: var(--color-gray-light);
+  text-shadow: -2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  font-size: 80px;
+  color: var(--color-gray-light);
+  --font-title: "News Cycle", sans-serif;
+  font-family: var(--font-english);
+  font-weight: 300;
+}
+
+.smallTitleEnglish {
+  font-size: 15px;
+  color: #000000;
+  font-weight: bold;
+  letter-spacing: 0;
+  font-family: var(--font-korean);
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 1px rgba(128, 128, 128, 0.1);
+  line-height: 20px;
+}
+
+.smallTitleOrange {
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--color-yellow);
+}
+
+.smallTitleKorean {
+  font-size: 15px;
+  line-height: 25px;
+  color: #606060;
+  font-family: var(--font-korean);
+}
+
+.logoWithTitle {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-yellow);
+}
+
+/* ------------------------------------메인 flash-------------------------------------- */
+
+.js_firstPopUp {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../../imgs/logos/mastercard_logo.gif) no-repeat center/cover;
+  display: none;
+  z-index: 99999;
+}
+.js_firstPopUp.on {
+  display: block;
+  transition: all 2s linear;
+  -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-fwd 5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 0;
+  }
+}
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 0;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+main {
+  width: 100%;
+  margin-top: 70px;
+  background-color: var(--color-background);
+}
+
+section {
+  margin: 0 auto;
+  width: 95%;
+  height: 80vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  color: #f1f1f1;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-gray-dark);
+}
+
+.sectionWrapper {
+  width: 70%;
+  min-width: 1000px;
+}
+
+.fisrtSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.firstSectionTitle {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  box-sizing: border-box;
+  color: white;
+}
+
+.firstSectionTitleLeft {
+  width: 100%;
+  height: 100%;
+  font-size: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--font-titleSub);
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+.firstSectionTitleRight {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--color-yellow);
+}
+
+.logoWithTitle img {
+  width: 150px;
+}
+
+.firstSectionBackground {
+  width: 100%;
+  height: 40%;
+  animation: see 2s linear infinite;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.firstSectionBackground > iframe {
+  position: absolute;
+  top: -100%;
+}
+/* ----------------------------------------------------------------------------- */
+
+.secondSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.smallMenucontent {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5% 0;
+  box-sizing: border-box;
+}
+
+.smallMenuTop {
+  border-bottom: 1px solid var(--color-gray-dark);
+}
+
+.smallMenucontent > div {
+  width: 48%;
+  height: 100%;
+}
+
+.smallMenuPic {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.tapandgo {
+  background: url(../../imgs/pics/tapandgo.png) no-repeat center/cover;
+}
+.visualnumber {
+  background: url(../../imgs/pics/visual.png) no-repeat center/cover;
+}
+.masterpass {
+  background: url(../../imgs/pics/masterpass.png) no-repeat center/cover;
+}
+.premium {
+  background: url(../../imgs/pics/preium.png) no-repeat center/cover;
+}
+
+.smallMenuArticle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.smallMenuArticle > p {
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 25px;
+}
+.smallMenuArticle .smallTitleOrange {
+  display: block;
+  text-align: right;
+  margin-left: auto;
+}
+
+i.xi-angle-right-thin {
+  border: 1px solid var(--color-yellow);
+  padding: 3px;
+  margin-right: 5px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+/* --------------------------------------------------------------------------- */
+
+.thirdSectionWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thirdSectionWrapper h1 {
+  font-size: 3vw;
+  text-shadow: none;
+}
+
+.circles {
+  width: 250px;
+  height: 250px;
+  border-radius: 150px;
+  border: 10px solid var(--color-orange);
+  position: relative;
+}
+
+.circles div {
+  width: 100%;
+  height: 100%;
+  border-radius: 150px;
+  position: absolute;
+  z-index: 1;
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(0);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.yellowCircle {
+  background-color: var(--color-yellow);
+}
+.redCircle {
+  background-color: var(--color-red);
+}
+
+.circles div.blink {
+  z-index: 2;
+  animation: blink 0.8s ease;
+}
+
+.growBusinessArticle {
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 30px;
+}
+/* --------------------------------------------------------------------- */
+
+.videoSection {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoSectionVideo {
+  overflow: hidden;
+  position: absolute;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  filter: brightness(0.7);
+}
+
+.fifthSectionWrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}

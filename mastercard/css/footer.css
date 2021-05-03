@@ -1,0 +1,161 @@
+:root {
+  /* 폰트 */
+  --font-korean: "Noto Sans KR", sans-serif;
+  --font-english: "Prompt", sans-serif;
+  --font-title: "News Cycle", sans-serif;
+  --font-titleSub: "Red Hat Display";
+
+  /* 폰트사이즈 */
+
+  --fontsize-smallTitle: 15px;
+  --fontsize-title: 100px;
+  --fontsize-sectionTitle: 800px;
+
+  /* 컬러 */
+
+  --color-background: #212121;
+  --color-yellow: #f79e1b;
+  --color-red: #eb001b;
+  --color-orange: #ff5f00;
+  --color-gray-light: #f1f1f1;
+  --color-gray-dark: rgb(55, 55, 55);
+}
+
+footer {
+  color: white;
+  width: 100%;
+  background-color: var(--color-background);
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerInner {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footerLeft {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footerLeft ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footerLeft h3 {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  gap: 5px;
+}
+
+.footerLeft h3 span {
+  font-size: 30px;
+}
+
+address {
+  font-size: 15px;
+  color: #000000;
+  font-weight: bold;
+  letter-spacing: 0;
+  font-family: var(--font-korean);
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 1px rgba(128, 128, 128, 0.1);
+  line-height: 20px;
+}
+
+.footerRight {
+  width: 50%;
+  padding-top: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerUtils {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerUtils > div {
+  width: 50%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footerUtils h4 {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.footerUtils > div > ul {
+  display: flex;
+  margin: 0 auto;
+  width: 60%;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 15px;
+  color: var(--color-gray-light);
+}
+
+.etc {
+  width: 100%;
+  display: flex;
+}
+
+.etc > div {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.languageIcon {
+  width: 30px;
+  height: 30px;
+  background: url(../imgs/icons/world.png) no-repeat center/cover;
+}
+
+.languages {
+  display: flex;
+}
+
+.languages ul {
+  margin-left: auto;
+  display: flex;
+  border-radius: 5px solid blue;
+}
+
+.languages li {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 10px;
+  background-color: var(--color-gray-light);
+}
+
+.languages li a {
+  color: var(--color-background);
+  font-weight: bold;
+}
+
+.korean {
+  font-family: var(--font-korean);
+}
