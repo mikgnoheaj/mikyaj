@@ -1,0 +1,368 @@
+:root {
+  /* FONTS */
+  --fonst-size-sml: 15px;
+  --fonst-size-sml2: 18px;
+
+  --fonst-size-mid: 20px;
+  --fonst-size-rag: 30px;
+  --fonst-size-exrag: 40px;
+  --fonst-size-bigtitle: 100px;
+  --fonst-size-btn: 25px;
+
+  /* COLORS */
+  --gray-: #f1f1f1;
+  --color-main: #d80014;
+  --before-click-: #4e4e4e;
+  --after-click-: #383838;
+
+  /* PADDING */
+  --padding-1: 10px;
+  --padding-2: 30px;
+  --padding-3: 50px;
+  --padding-3: 70px;
+  --padding-4: 90px;
+
+  /* MARGIN */
+  --margin-1: 20px;
+  --margin-2: 50px;
+  --margin-3: 70px;
+  --margin-4: 90px;
+  --margin-5: 100px;
+
+  /* SIZE */
+}
+
+main {
+  width: calc(100vw - 350px);
+  height: 100vh;
+  margin-left: auto;
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(22, 22, 22);
+}
+
+/* login */
+
+.login {
+  position: fixed;
+  width: calc(100vw - 350px);
+  height: 100%;
+  right: 0;
+  top: 0;
+  backdrop-filter: blur(10px);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.loginModal {
+  width: 1000px;
+  height: 900px;
+  box-sizing: border-box;
+  padding: 30px 60px;
+  background: var(--gray-);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.loginModal .logo img {
+  width: 380px;
+  height: 80px;
+}
+
+.login-join {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.login-join > div {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.login-joinTitle {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.login-joindescribe {
+  margin-top: 20px;
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: 100;
+}
+
+form.firstform {
+  margin-top: 30px;
+}
+
+label {
+  font-size: small;
+  line-height: 30px;
+}
+
+label span {
+  color: var(--color-main);
+}
+
+input {
+  width: 300px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background: white;
+  position: relative;
+  margin-bottom: 30px;
+  font-size: var(--fonst-size-mid);
+  padding-left: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.274);
+  font-size: small;
+}
+
+input::before {
+  content: "";
+}
+
+.lost {
+  font-size: var(--fonst-size-sml2);
+  font-weight: 100;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button {
+  font-size: var(--fonst-size-btn);
+  width: 200px;
+  height: 50px;
+  background: var(--color-main);
+  border-radius: 10px;
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+}
+
+#joinBtn,
+#loginBtn {
+  margin-top: auto;
+}
+
+button:focus {
+  filter: brightness(90%);
+}
+
+.benefits {
+  margin-top: auto;
+}
+
+.checkOder {
+  margin-top: 50px;
+}
+
+form.secondform {
+  margin-top: 30px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* bullet */
+.bulletBtnswrap {
+  z-index: 100;
+  border-radius: 25px;
+  position: absolute;
+  right: 50px;
+  top: 70px;
+  width: 250px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bulletBtnswrap ul {
+  display: flex;
+  width: 250px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.267);
+}
+
+.bullet.active {
+  background-color: rgba(255, 0, 0, 0.644);
+}
+
+/* section */
+
+section {
+  flex: none;
+  width: calc(100vw - 350px);
+  height: 100vh;
+  box-sizing: border-box;
+  padding: var(--padding-4);
+  position: absolute;
+  transition: all 0.5s ease-in;
+  opacity: 0;
+}
+section.showing {
+  opacity: 1;
+}
+
+section.letsWorkOut {
+  background: url(../imgs/letsWorkOut-background.png) no-repeat center/cover;
+}
+section.lifeWith {
+  background: url(../imgs/lifeWith-background.png) no-repeat center/cover;
+}
+section.maleWear {
+  background: url(../imgs/male-background.png) no-repeat center/cover;
+}
+
+.model {
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.bubble1 {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bubbleinner {
+  width: 35%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.bubble-effect {
+  animation: bubble 8s linear infinite;
+}
+@keyframes bubble {
+  10% {
+    transform: scale(1.1);
+    border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+  }
+  20% {
+    border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+  }
+  30% {
+    border-radius: 39% 61% 47% 53% / 57% 40% 60% 63%;
+  }
+  40% {
+    border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+  }
+  50% {
+    border-radius: 50%;
+    transform: scale(1.3);
+  }
+
+  60% {
+    border-radius: 50% 70% 53% 47% / 72% 69% 31% 28%;
+  }
+  70% {
+    border-radius: 20% 50% 53% 47% / 26% 22% 78% 74%;
+  }
+  80% {
+    border-radius: 50% 10% 53% 47% / 26% 69% 31% 74%;
+  }
+  90% {
+    border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+    transform: scale(1);
+  }
+}
+
+.rotate {
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-radius: 25px;
+  box-sizing: border-box;
+  height: 50%;
+  color: whitesmoke;
+  z-index: 5;
+}
+
+.promo h1 {
+  text-align: center;
+  white-space: nowrap;
+  font-size: 8vw;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  z-index: 5;
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.text p:first-of-type {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 60px;
+}
+
+.text p:last-of-type {
+  text-align: right;
+  font-size: 30px;
+  display: block;
+}
+
+.text p:last-of-type a {
+  position: relative;
+  color: whitesmoke;
+}
+
+.text p:last-of-type a::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -50px;
+  bottom: 50%;
+  transform: translateY(50%);
+  background: url(../imgs/arrow.png) no-repeat center/cover;
+}

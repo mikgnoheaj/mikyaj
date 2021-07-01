@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/aninmation.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- <i class=""></i> -->
+
+
+    <title>Lululemon</title>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+
+        <h1 class="logo"><a href="lululemon.html"><img src="imgs/logo.png" alt="logo"></a></h1>
+        <nav>
+            <ul class="utils">
+                <li><a href="#"><i class="xi-profile loginBtn"></i></a></li>
+                <li><a href="#"><i class="xi-maker"></i></a></li>
+                <li><a href="#"><i class="xi-dropbox"></i></a></li>
+            </ul>
+            <ul class="menu depth1">
+                <li class="depth1Item"><a href="#">NEW IN</a>
+                    <ul class="depth2">
+                        <li class="depth2Item"><a href="#">이달의 신상</a></li>
+                        <li class="depth2Item"><a href="#">판매 예정 상품</a></li>
+                    </ul>
+                </li>
+                <li class="depth1Item"><a href="#">WOMEN
+                        <ul class="depth2">
+                            <li class="depth2Item"><a href="#">컬렉션</a></li>
+                            <li class="depth2Item"><a href="#">액티비티</a></li>
+                            <li class="depth2Item"><a href="#">상의</a></li>
+                            <li class="depth2Item"><a href="#">하의</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li class="depth1Item"><a href="#">MEN
+                        <ul class="depth2">
+                            <li class="depth2Item"><a href="#">컬렉션</a></li>
+                            <li class="depth2Item"><a href="#">액티비티</a></li>
+                            <li class="depth2Item"><a href="#">상의</a></li>
+                            <li class="depth2Item"><a href="#">하의</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li class="depth1Item"><a href="#">ACCESSORY</a>
+                    <ul class="depth2">
+                        <li class="depth2Item"><a href="#">모자</a></li>
+                        <li class="depth2Item"><a href="#">가방</a></li>
+                        <li class="depth2Item"><a href="#">장갑</a></li>
+                        <li class="depth2Item"><a href="#">양말</a></li>
+                        <li class="depth2Item"><a href="#">ETC</a></li>
+                    </ul>
+                </li>
+                <li class="depth1Item"><a href="#">SWIM</a>
+                    <ul class="depth2">
+                        <li class="depth2Item"><a href="#">여성</a></li>
+                        <li class="depth2Item"><a href="#">남성</a></li>
+                        <li class="depth2Item"><a href="#">아동</a></li>
+                    </ul>
+                </li>
+                <li class="depth1Item"><a href="#">PREMIUM EQUIPMENT</a>
+                    <ul class="depth2">
+                        <li class="depth2Item"><a href="#">매트</a></li>
+                        <li class="depth2Item"><a href="#">롤러</a></li>
+                        <li class="depth2Item"><a href="#">벨트</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="social">
+                <li><a href="#"><i class="xi-instagram"></i></a></li>
+                <li><a href="#"><i class="xi-facebook"></i></a></li>
+                <li><a href="#"><i class="xi-kakaotalk"></i></a></li>
+                <li><a href="#"><i class="xi-twitter"></i></a></li>
+                <p class="socialDescr">소셜네트워크로 소식을 받아보세요</p>
+            </ul>
+            <ul class="notice">
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CHECK SIZE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+
+    <main>
+        <div class="login">
+            <div class="loginModal">
+                <h1 class="logo"><a href="lululemon.html"><img src="imgs/logo.png" alt="logo"></a></h1>
+                <div class="login-join">
+                    <div class="log-in">
+                        <p class="login-joinTitle">LOGIN</p>
+                        <form class="firstform">
+                            <label for="id"> <span>*</span> ID</label><br>
+                            <input type="text" id="id" name="id" placeholder="아이디를 입력하세요"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = '아이디를 입력하세요'" /><br>
+                            <label for="passwords"> <span>*</span> PASSWORDS</label><br>
+                            <input type="password" id="passwords" name="passwords" placeholder="비밀번호를 입력하세요"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = '비밀번호를 입력하세요'" />
+                            <p class="lost">아이디 혹은 비밀번호를 잊으셨나요?</p>
+                        </form>
+                        <button id="loginBtn">LOGIN</button>
+                    </div>
+                    <div class="join">
+                        <div class="joinus">
+                            <p class="login-joinTitle">아직 회원이 아니신가요?</p>
+                            <p class="login-joindescribe">회원 가입 후 온라인 게스트 혜택을 받으세요</p>
+                        </div>
+                        <div class="benefits">
+                            <p class="login-joinTitle">온라인 게스트 혜택</p>
+                            <p class="login-joindescribe">
+                                브랜드 스토리, 커뮤니티 이벤트, 제품 소식이 <br>
+                                담긴 뉴스레터를 받아볼 수 있어요. <br>
+                                배송정보를 저장할 수 있어 결제가 편리하고,<br>
+                                주문목록 및 배송 내역을 빠르게 확인할 수 있어요.
+                            </p>
+                        </div>
+                        <button id="joinBtn">JOIN US</button>
+                    </div>
+                </div>
+                <div class="checkOder">
+                    <p class="login-joinTitle">비회원 주문확인하기</p>
+                    <p class="login-joindescribe">주문목록 및 배송정보를 조회할 수 있어요.</p>
+                    <form class="secondform">
+                        <div>
+                            <label for="oderNum"> <span>*</span> 주문번호</label><br>
+                            <input type="text" id="oderNum" name="oderNum" placeholder="주문번호를 입력하세요"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = '주문번호를 입력하세요'" /><br>
+                        </div>
+                        <div>
+                            <label for="phone"> <span>*</span> 전화번호</label><br>
+                            <input type="password" id="phone" name="phone" placeholder="전화번호를 입력하세요"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = '전화번호를 입력하세요'" />
+                        </div>
+                        <button id="checkBtn">조회하기</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+section-->
+        <section class="promo letsWorkOut slider_item">
+            <img src="imgs/letsWorkOut-model.png" alt="model" class="model">
+            <div class="bubble1">
+                <div class="bubbleinner bubble1-1 bubble-effect"></div>
+            </div>
+            <div class="text">
+                <h1 class="slideup">TIME TO WORK OUT</h1>
+                <p class="slide-in-left">한계를 두려워하지 말고 앞으로 나아가세요.</p>
+                <p class="slide-in-left"><a href="#">여성 트레이닝 컬렉션</a></p>
+            </div>
+            <!-- <div class="bubble1">
+                <div class="bubbleinner bubble1-2 bubble-effect"></div>
+            </div>
+            <div class="bubble1">
+                <div class="bubbleinner bubble1-3 bubble-effect"></div>
+            </div> -->
+        </section>
+
+        <section class="promo lifeWith slider_item">
+            <img src="imgs/lifeWith-model.png" alt="model" class="model">
+            <div class="bubble1">
+                <div class="bubbleinner bubble1-1 bubble-effect"></div>
+            </div>
+            <div class="text">
+                <h1 class="slideup">ANYTIME WITH US</h1>
+                <p class="slide-in-left">일상생활에도 룰루레몬과 함께 항상 준비된 나</p>
+                <p class="slide-in-left"><a href="#">여성 데일리웨어</a></p>
+            </div>
+        </section>
+
+        <section class="promo maleWear slider_item">
+            <img src="imgs/male-model.png" alt="model" class="model">
+            <div class="bubble1">
+                <div class="bubbleinner bubble1-1 bubble-effect"></div>
+            </div>
+            <div class="text">
+                <h1 class="slideup">MEN'S WEARS</h1>
+                <p class="slide-in-left">그 어떤 순간에도 자유로운, 늘 준비된 나를 발견해보세요.</p>
+                <p class="slide-in-left"><a href="#">남성 룰루레몬 컬렉션</a></p>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- footer -->
+
+
+    <!-- script -->
+
+    <script>
+
+        const depth1Items = document.querySelectorAll('.depth1Item');
+        depth1Items.forEach(depth1Item => {
+            depth1Item.addEventListener('click', event => {
+                const currenton = document.querySelector('.depth1Item.on');
+                if (currenton && currenton !== depth1Item) {
+                    currenton.classList.toggle('on');
+                }
+                depth1Item.classList.toggle('on');
+            })
+        });
+
+        const loginWrap = document.querySelector('.login');
+        const loginInner = document.querySelector('.loginModal');
+        const loginBtn = document.querySelector('.loginBtn');
+
+        loginBtn.addEventListener('click', login => {
+            loginWrap.classList.toggle('fadein');
+            loginInner.classList.toggle('slide-up');
+        });
+
+
+        loginWrap.addEventListener('click', close => {
+            loginWrap.classList.remove('fadein');
+        })
+
+        const showing_class = "showing";
+        const firstSlide = document.querySelector(".promo");
+        const slideItem = document.querySelector(".promo")
+
+        function slide() {
+            const currentSlide = document.querySelector(`.${showing_class}`);
+
+            if (currentSlide) {
+                currentSlide.classList.remove(showing_class);
+                const nextSlide = currentSlide.nextElementSibling;
+
+                if (nextSlide) {
+                    nextSlide.classList.add(showing_class);
+                }
+                else {
+                    firstSlide.classList.add(showing_class);
+                }
+            }
+            else {
+                firstSlide.classList.add(showing_class);
+            }
+        }
+
+        slide();
+        setInterval(slide, 5000);
+
+    </script>
+</body>
+
+</html>
